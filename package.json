@@ -1,6 +1,7 @@
 {
   "name": "tiny-habits",
   "version": "0.0.0",
+  "author": "Elvira Gizatullina",
   "private": true,
   "scripts": {
     "start": "nodemon ./bin/www",
