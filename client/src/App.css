@@ -5,6 +5,11 @@
   text-align: center;
 }
 
+.navbar {
+  display: flex;
+  justify-content: space-between;
+}
+
 .logo {
   height: 6em;
   padding: 1.5em;

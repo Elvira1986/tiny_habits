@@ -35,7 +35,7 @@ router.get("/:id", async function (req, res, next) {
 // INSERT a new habit into the DB
 router.post("/", async function (req, res, next) {
   let { title, description, completed, days_in, total_days } = req.body; // extract names from request body
-
+  console.log(req.body);
   try {
     let sql = `
       INSERT INTO habits (title, description, completed, days_in, total_days)
@@ -80,7 +80,7 @@ router.patch("/:id", async function (req, res) {
   let habitId = req.params.id;
 
   try {
-    // SELECT evrything from habit table with specific ID;
+    // SELECT everything from habit table with specific ID;
     let result = await db(`SELECT * FROM habits WHERE id = ${habitId}`);
     // If ID is not exist, send error message
     if (result.data.length === 0) {

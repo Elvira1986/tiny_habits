@@ -1,0 +1,21 @@
+.HabitForm label {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.HabitForm input {
+  display: block;
+  width: 100%;
+}
+
+.HabitForm label {
+  text-align: left;
+}
+
+.submit {
+  color: #fff;
+  font-size: 16px;
+  background-color: rgb(62, 159, 169);
+  border-color: rgb(49, 162, 162);
+  padding: 0.4em 1em;
+}

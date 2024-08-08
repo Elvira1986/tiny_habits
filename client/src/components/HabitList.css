@@ -1,0 +1,24 @@
+.habit-list div {
+  display: flex;
+  cursor: pointer;
+  text-align: left;
+  color: #000;
+}
+.habit-list a {
+  cursor: pointer;
+  text-align: left;
+  color: #312cc2;
+}
+
+button {
+  padding: 0.3em 1em;
+  margin: 0.2em 0.5em;
+  background-color: rgb(236, 113, 113);
+  border-radius: 7px;
+  border-color: rgb(235, 160, 160);
+  cursor: pointer;
+}
+
+.ToDoList span.done {
+  text-decoration: line-through;
+}
