@@ -7,3 +7,19 @@
 .span-2 {
   text-align: center;
 }
+
+table {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem;
+  padding-bottom: 2rem;
+}
+
+td,
+input {
+  color: #e5e5e5;
+  font-size: 18px;
+  text-align: center;
+  padding: 1rem;
+  border: 2px solid #fcbf49;
+}
