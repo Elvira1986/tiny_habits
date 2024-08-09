@@ -4,6 +4,7 @@ import "./HabitItem.css";
 
 function HabitItem() {
   const [habit, setHabit] = useState(null);
+  const [updateHabit, setUpdateHabit] = useState(-1);
   const { id } = useParams();
   const navigate = useNavigate();
 
@@ -19,12 +20,14 @@ function HabitItem() {
 
   // EDIT habit
   async function editHabit() {
-    let options = {
+    let habit = 0;
+    let option = {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(body),
     };
     try {
+      setHabit();
     } catch (err) {
       console.log(err);
     }
@@ -57,7 +60,7 @@ function HabitItem() {
 
   return (
     <div>
-      <h2>Habit Item</h2>
+      <h3>Habit Item</h3>
       <>
         {habit && (
           <div>
@@ -67,8 +70,12 @@ function HabitItem() {
               {habit.days_in} of {habit.total_days}{" "}
             </p>
             <div className="span-2">
-              <button onClick={editHabit}>EDIT</button>
-              <button onClick={deleteHabit}>DELETE</button>
+              <button onClick={() => editHabit(habit.id)}>
+                <i className="fa-solid fa-marker" title="Update Habit"></i>
+              </button>
+              <button onClick={deleteHabit}>
+                <i className="fa-solid fa-trash-can" title="Delete Habit"></i>
+              </button>
             </div>
           </div>
         )}

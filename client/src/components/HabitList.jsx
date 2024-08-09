@@ -42,6 +42,7 @@ function HabitList() {
   return (
     <div>
       <h3>All Habit List </h3>
+
       <div className="habit-list">
         {habits.map((habit) => (
           <div className="habit-item" key={habit.id}>
@@ -50,10 +51,12 @@ function HabitList() {
               className="addDay"
               onClick={() => addDayToHabit(habit.id)}
             >
-              Add Day
+              <i className="fa-regular fa-calendar-plus" title="Add Day"></i>
             </button>
             <Link to={`/habits/${habit.id}`}>
-              <button type="button">Edit</button>
+              <button type="button">
+                <i className="fa-solid fa-pen-to-square" title="Edit Habit"></i>
+              </button>
               {habit.title} {habit.days_in} / {habit.total_days}
             </Link>
           </div>

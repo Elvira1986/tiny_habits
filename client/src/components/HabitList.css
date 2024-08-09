@@ -1,24 +1,36 @@
 .habit-list div {
-  display: flex;
+  /* display: flex; */
+  /* justify-content: center; */
+  /* align-items: center; */
   cursor: pointer;
-  text-align: left;
-  color: #000;
+  max-width: fit-content;
+  justify-content: center;
+  align-items: center;
+  width: 60%;
+  padding-top: 0.6rem;
+  margin-left: 10rem;
 }
+
 .habit-list a {
   cursor: pointer;
-  text-align: left;
-  color: #312cc2;
+  /* text-align: left; */
+  color: #e5e5e5;
+  font-size: 24px;
 }
 
 button {
   padding: 0.3em 1em;
   margin: 0.2em 0.5em;
-  background-color: rgb(236, 113, 113);
-  border-radius: 7px;
-  border-color: rgb(235, 160, 160);
   cursor: pointer;
 }
 
 .ToDoList span.done {
   text-decoration: line-through;
+}
+
+.fa-regular,
+.fa-solid {
+  color: #fcbf49;
+  font-size: 28px;
+  background-color: #e5e5e5;
 }

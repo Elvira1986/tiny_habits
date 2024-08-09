@@ -74,7 +74,7 @@ router.put("/:id", async function (req, res) {
   }
 });
 
-// UPDATE a habit from the DB
+// ADD day to habit from the DB
 router.patch("/:id", async function (req, res) {
   // get habit by id and assign it
   let habitId = req.params.id;
