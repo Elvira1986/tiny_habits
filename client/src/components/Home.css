@@ -1,0 +1,10 @@
+ul li {
+  color: #e5e5e5;
+  text-align: center;
+  list-style: none;
+  font-weight: bold;
+}
+ul {
+  text-align: left;
+  padding-bottom: 1rem;
+}

@@ -1,36 +1,49 @@
-.habit-list div {
-  /* display: flex; */
-  /* justify-content: center; */
-  /* align-items: center; */
-  cursor: pointer;
-  max-width: fit-content;
-  justify-content: center;
-  align-items: center;
-  width: 60%;
-  padding-top: 0.6rem;
-  margin-left: 10rem;
+.habit-item {
+  display: block;
+  background-color: #5fa8d3;
+  text-align: left;
+  border-radius: 0.6rem;
+  padding: 1.2rem;
+  margin: 1rem auto;
+  width: 70%;
+  border: 2px solid #e5e5e5;
 }
 
 .habit-list a {
   cursor: pointer;
-  /* text-align: left; */
   color: #e5e5e5;
-  font-size: 24px;
+  font-size: 20px;
+  font-weight: bold;
+  /* margin-left: 1rem; */
 }
 
 button {
-  padding: 0.3em 1em;
-  margin: 0.2em 0.5em;
+  border: 2px solid #fcbf49;
   cursor: pointer;
 }
 
-.ToDoList span.done {
-  text-decoration: line-through;
+.HabitTitle {
+  margin-left: 1.3rem;
 }
 
 .fa-regular,
 .fa-solid {
   color: #fcbf49;
   font-size: 28px;
-  background-color: #e5e5e5;
 }
+
+.fa-regular:hover,
+.fa-solid:hover {
+  color: #5fa8d3;
+}
+
+/* Website Colors 
+body: 
+#14213d
+Text: 
+#e5e5e5
+
+Buttons:
+#5fa8d3
+#fcbf49
+*/

@@ -1,50 +1,65 @@
+.HabitForm {
+  max-width: 600px;
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  background-color: #5fa8d3;
+  padding: 5rem;
+  border-radius: 0.6rem;
+}
+
 .HabitForm label {
   display: block;
   margin-bottom: 10px;
+  text-align: left;
+  padding: 0.3rem;
+  color: #e5e5e5;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .HabitForm input {
   display: block;
-  font-size: 18px;
-  padding: 3rem;
-  width: 70%;
-  background-color: #5fa8d3;
-  padding: 0.7rem 0.3rem;
-  border-radius: 0.5rem;
-  color: #e5e5e5;
-}
-
-.HabitForm label {
   text-align: left;
-  color: #e5e5e5;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #e5e5e5;
+  padding: 0.8rem 1rem;
+  border-radius: 0.6rem;
+  color: #5fa8d3;
+  border: 2px solid #5fa8d3;
 }
-.HabitForm {
-  padding-top: 2rem;
-  margin-left: 25%;
-  margin-right: 5%;
-  width: 70%;
+
+.HabitForm input:focus {
+  outline: none !important;
+  border: 2px solid #fcbf49;
 }
-/* .navbar {
+
+.HabitForm input::placeholder {
+  font-weight: bold;
+  font-size: 18px;
+  opacity: 0.3;
+  color: #5fa8d3;
+}
+
+.span-2 {
   display: flex;
+  gap: 1rem;
+  flex: 0 0 100%;
   justify-content: space-between;
-} */
+}
 
-/* Website Colors 
-body: 
-#14213d
-Text: 
-#e5e5e5
-
-Buttons:
-#5fa8d3
-#fcbf49
-*/
 .submit {
   text-align: center;
-  color: #fcbf49;
-  font-weight: 700;
+  display: block;
 }
 
-.submit:hover {
-  color: #5fa8d3;
+@media (max-width: 600px) {
+  .span-2 {
+    display: block;
+  }
 }

@@ -23,7 +23,7 @@ function HabitForm() {
 
   async function addHabit() {
     let body = { ...newHabit, completed: 0 };
-    // console.log(body);
+
     // Create fetch options
     let options = {
       method: "POST",
@@ -51,46 +51,52 @@ function HabitForm() {
 
   return (
     <>
-      <h1>Habit Form</h1>
+      <h3>Habit Form</h3>
       <form className="HabitForm" onSubmit={handleSubmit}>
         <label>
           New Habit
           <input
             type="text"
             name="title"
+            placeholder="Go to gym"
             value={newHabit.title}
             onChange={handleChange}
           />
         </label>
         <label>
-          Habit Description
+          Habit Result and Motivation
           <input
             type="text"
             name="description"
+            placeholder="Get fit and loose 10lb"
             value={newHabit.description}
             onChange={handleChange}
           />
         </label>
-
-        <label>
-          Days IN
-          <input
-            type="number"
-            name="days_in"
-            value={newHabit.days_in}
-            onChange={handleChange}
-          />
-        </label>
-        <label>
-          Total Days Target
-          <input
-            type="number"
-            name="total_days"
-            value={newHabit.total_days}
-            onChange={handleChange}
-          />
-        </label>
-
+        <div className="span-2">
+          <label>
+            Days IN
+            <input
+              className="row"
+              type="number"
+              name="days_in"
+              placeholder="1"
+              value={newHabit.days_in}
+              onChange={handleChange}
+            />
+          </label>
+          <label>
+            Target Days
+            <input
+              className="row"
+              type="number"
+              name="total_days"
+              placeholder="90"
+              value={newHabit.total_days}
+              onChange={handleChange}
+            />
+          </label>
+        </div>
         <button className="submit" type="submit">
           Submit
         </button>

@@ -26,6 +26,8 @@ nav ul li a {
   display: block;
   text-decoration: none;
   color: #e5e5e5;
+  font-weight: bold;
+  font-size: 18px;
   padding: 0.5rem;
   margin: 0 0.7rem;
 }
@@ -36,7 +38,7 @@ nav ul li a:not(.active):hover {
 }
 
 .active {
-  color: #fcbf49;
+  color: #f8bd32;
 }
 
 nav .menu {
@@ -82,5 +84,6 @@ nav .menu span {
 
   nav ul li a {
     margin: 0.1rem 0.5rem;
+    font-size: 18px;
   }
 }

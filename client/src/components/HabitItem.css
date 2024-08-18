@@ -1,25 +1,42 @@
+table {
+  margin-left: auto;
+  margin-right: auto;
+  padding: 1rem 3rem;
+  background-color: #5fa8d3;
+  border-radius: 0.6rem;
+  border: 2px solid #e5e5e5;
+}
+
 .fa-solid {
   color: #fcbf49;
   font-size: 28px;
   background-color: #e5e5e5;
 }
 
-.span-2 {
-  text-align: center;
-}
-
-table {
-  margin-left: auto;
-  margin-right: auto;
-  padding: 1rem;
-  padding-bottom: 2rem;
-}
-
 td,
 input {
   color: #e5e5e5;
-  font-size: 18px;
+  font-size: 20px;
+  font-weight: bold;
   text-align: center;
   padding: 1rem;
+  font-size: 20px;
+  background-color: #5fa8d3;
+}
+
+input {
+  color: #e5e5e5;
+  border-radius: 0.6rem;
+  border: 2px solid #e5e5e5;
+}
+
+input:focus {
+  outline: none !important;
   border: 2px solid #fcbf49;
+}
+
+label {
+  display: block;
+  text-align: left;
+  font-size: 14px;
 }

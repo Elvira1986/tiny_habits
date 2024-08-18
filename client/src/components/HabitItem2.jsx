@@ -7,7 +7,7 @@ function HabitItem() {
   const habitInitialState = {
     title: "",
     description: "",
-    completed: 0,
+    completed: false,
     days_in: "",
     total_days: "",
   };
@@ -19,7 +19,7 @@ function HabitItem() {
   const { id } = useParams();
   const navigate = useNavigate();
 
-  // Geting Habit with specific id and passing this data to front end
+  // Geting Habit with specific id and passing his data to front end
   const getHabitItem = async () => {
     try {
       const response = await fetch(`/api/habits/${id}`);
@@ -56,27 +56,25 @@ function HabitItem() {
 
   // EDIT habit where we edit the change and send data back to server
   async function editHabit() {
-    let body = { ...habit, completed: 0 };
     // Do the PUT by creating fetch options
     let options = {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(body),
+      body: JSON.stringify(habit),
     };
     try {
       let response = await fetch(`/api/habits/${id}`, options);
       if (response.ok) {
-        let data = await response.json();
         getHabitItem();
-        setHabit(data);
-        navigate(`/habits`);
+        // navigate(`/habits/:id`);
       } else {
         console.log(`Server error: ${response.status} ${response.statusText}`);
       }
     } catch (err) {
-      console.log(`Network error: ${err.message}`);
+      console.log(err);
     }
   }
+
   // Calling the form to send new edit data to the Database and calling PUT/editHabit function
   function handleUpdate(e) {
     e.preventDefault();
@@ -100,94 +98,79 @@ function HabitItem() {
   return (
     <>
       <div>
+        <h3>Habit Item</h3>
+
         {isEdit ? (
-          <>
-            <h3>Update Current Habbit</h3>
-            <form onSubmit={handleUpdate}>
-              <table>
-                <tr>
-                  <td>
-                    <label>Update Habit: </label>
-                    <input
-                      type="text"
-                      name="title"
-                      onChange={handleInput}
-                      value={habit.title}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Update Motivation: </label>
-                    <input
-                      type="text"
-                      name="description"
-                      onChange={handleInput}
-                      value={habit.description}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Edit Days IN: </label>
-                    <input
-                      type="number"
-                      name="days_in"
-                      onChange={handleInput}
-                      value={habit.days_in}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <label>Edit Target Days: </label>
-                    <input
-                      type="number"
-                      name="total_days"
-                      onChange={handleInput}
-                      value={habit.total_days}
-                    />
-                  </td>
-                </tr>
-                <tr>
-                  <td>
-                    <button type="submit">Update</button>
-                  </td>
-                </tr>
-              </table>
-            </form>
-          </>
-        ) : (
-          <>
-            <h3>Your Current Habbit</h3>
+          <form onSubmit={handleUpdate}>
             <table>
               <tr>
-                <td>{habit.title} </td>
-              </tr>
-              <tr>
-                <td> {habit.description}</td>
-              </tr>
-              <tr>
                 <td>
-                  {habit.days_in} <span> of </span>
-                  {habit.total_days} <span> days</span>
+                  <input
+                    type="text"
+                    name="title"
+                    onChange={handleInput}
+                    value={habit.title}
+                  />
                 </td>
               </tr>
               <tr>
                 <td>
-                  <button onClick={editMode}>
-                    <i className="fa-solid fa-marker" title="Edit Habit"></i>
-                  </button>
-                  <button onClick={deleteHabit}>
-                    <i
-                      className="fa-solid fa-trash-can"
-                      title="Delete Habit"
-                    ></i>
-                  </button>
+                  <input
+                    type="text"
+                    name="description"
+                    onChange={handleInput}
+                    value={habit.description}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <input
+                    type="number"
+                    name="days_in"
+                    onChange={handleInput}
+                    value={habit.days_in}
+                  />
+                </td>
+                <td>
+                  <input
+                    type="number"
+                    name="total_days"
+                    onChange={handleInput}
+                    value={habit.total_days}
+                  />
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <button type="submit">Update</button>
                 </td>
               </tr>
             </table>
-          </>
+          </form>
+        ) : (
+          <table>
+            <tr>
+              <td>{habit.title} </td>
+            </tr>
+            <tr>
+              <td> {habit.description}</td>
+            </tr>
+            <tr>
+              <td>{habit.days_in} of</td>
+              <td>{habit.total_days}</td>
+            </tr>
+            <tr>
+              <td>
+                <button onClick={editMode}>
+                  <i className="fa-solid fa-marker" title="Edit Habit"></i>
+                </button>
+                <button onClick={deleteHabit}>
+                  <i className="fa-solid fa-trash-can" title="Delete Habit"></i>
+                </button>
+              </td>
+            </tr>
+          </table>
         )}
       </div>
     </>

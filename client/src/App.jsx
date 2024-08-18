@@ -5,6 +5,7 @@ import HabitForm from "./components/HabitForm";
 import HabitList from "./components/HabitList";
 import HabitItem from "./components/HabitItem";
 import Page404 from "./components/Page404";
+import Footer from "./components/Footer";
 import "./App.css";
 import { Routes, Route } from "react-router-dom";
 

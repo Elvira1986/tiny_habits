@@ -1,18 +1,31 @@
-import "./HabitList.css";
+import "./Home.css";
 function Home() {
   return (
-    <div>
-      <h1>Tiny habits</h1>
+    <div className="intro">
+      <h1>Welcome to Tiny Habits</h1>
+
       <p>
         Change your life for good with the Tiny Habits method—where simple
-        changes lead to real, life-changing results. It's easier than you think,
-        surprisingly fun, and designed for real-world success. <br />
-        Remember, no behavior happens without a prompt. Once you’ve identified
-        which tiny behavior you want to introduce into your life, you need to
-        find a good prompt to remind you to do it. You can tie this prompt to
-        yourself (some kind of internal emotional or physical cue), your
-        context, or an action in a pre-existing routine. Action-based prompts
-        are special in Tiny Habits. They’re called Anchors.
+        changes lead to real, life-changing results. It is easier than you
+        think, surprisingly fun, and Tiny Habbits are here to help. Effortlessly
+        track your habits, reach your personal goals, and stay motivated every
+        day. <br />
+      </p>
+      <ul>
+        According to Dr. BJ Fogg, 3 key things need to come together for a
+        behavior to happen:
+        <li>Motivation</li>
+        <li>Ability</li>
+        <li> Prompt</li>
+      </ul>
+      <h3>How About 21 Day Myth?</h3>
+      <p>
+        There is a popular idea out that it takes 21 days to make a habit.
+        Assuming you engage the new behavior every day, a three-week commitment
+        seems pretty manageable. Unfortunately, there are too many unknown
+        variables, like how hard is the habit and what you have do to achieve.
+        It is simply an incalculable equation, but we are here to help you to
+        stay on habit journey motivated and keep it track.
       </p>
     </div>
   );
