@@ -12,10 +12,3 @@ CREATE TABLE habits (
     total_days INT NOT NULL
 );
 
--- Insert some sample data
--- INSERT INTO habits (title, description,completed, days_in, total_days )
--- VALUES
---     ('Learn JS','', 'false', '23', '100'); ('Meditate','', 'false', '10', '100');
---     ('Study SQL','', 'false', '75', '100');
-
---  { "title": "Learn JS", "description": " ", "completed": "false", "days_in": 23,"total_days": 100}

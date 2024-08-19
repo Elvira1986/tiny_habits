@@ -1,22 +1,8 @@
 .App {
   /* max-width: 1280px; */
   margin: 0 auto;
-  /* padding: 2rem; */
-  /* height: 100%;
-  /* width: 100%; */
   text-align: center;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
 }
-
-/* Website Colors 
-body: 
-#14213d
-Text: 
-#e5e5e5
-
-Buttons:
-#5fa8d3
-#fcbf49
-*/
