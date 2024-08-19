@@ -2,6 +2,11 @@
 
 I created a full stack Tiny Habits app using React, Node/Express, and MySQL.
 
+![TinyHabits](https://github.com/user-attachments/assets/91cd6b0f-4d45-4557-a850-2b0c0ad6cf53)
+
+![tiny_Habit01](https://github.com/user-attachments/assets/7ca01749-ef53-403d-a663-60920ce65100)
+
+
 ## Built With
 
 - React JS
