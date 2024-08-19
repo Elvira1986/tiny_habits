@@ -5,7 +5,7 @@
   border-radius: 0.6rem;
   padding: 1.2rem;
   margin: 1rem auto;
-  width: 70%;
+  max-width: 60%;
   border: 2px solid #e5e5e5;
 }
 
@@ -22,7 +22,11 @@ button {
   cursor: pointer;
 }
 
-.HabitTitle {
+.Days {
+  margin-left: 3rem;
+}
+
+.Title {
   margin-left: 1.3rem;
 }
 
@@ -37,13 +41,13 @@ button {
   color: #5fa8d3;
 }
 
-/* Website Colors 
-body: 
-#14213d
-Text: 
-#e5e5e5
-
-Buttons:
-#5fa8d3
-#fcbf49
-*/
+@media (max-width: 600px) {
+  .habit-item {
+    max-width: 80%;
+  }
+  .Days {
+    /* margin-left: 4rem; */
+    display: block;
+    text-align: center;
+  }
+}

@@ -3,15 +3,15 @@
   display: block;
   margin: 0 auto;
   text-align: center;
-  width: 80%;
   background-color: #5fa8d3;
-  padding: 5rem;
+  padding: 3rem;
   border-radius: 0.6rem;
+  margin-bottom: 2rem;
 }
 
 .HabitForm label {
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 0.2rem;
   text-align: left;
   padding: 0.3rem;
   color: #e5e5e5;
@@ -28,7 +28,7 @@
   font-size: 18px;
   font-weight: bold;
   background-color: #e5e5e5;
-  padding: 0.8rem 1rem;
+  padding: 0.7rem 1rem;
   border-radius: 0.6rem;
   color: #5fa8d3;
   border: 2px solid #5fa8d3;

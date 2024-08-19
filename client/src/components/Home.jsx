@@ -1,9 +1,8 @@
 import "./Home.css";
 function Home() {
   return (
-    <div className="intro">
-      <h1>Welcome to Tiny Habits</h1>
-
+    <div className="Home">
+      <h1 className="text-3xl">Welcome to Tiny Habits</h1>
       <p>
         Change your life for good with the Tiny Habits method—where simple
         changes lead to real, life-changing results. It is easier than you
@@ -14,9 +13,16 @@ function Home() {
       <ul>
         According to Dr. BJ Fogg, 3 key things need to come together for a
         behavior to happen:
-        <li>Motivation</li>
-        <li>Ability</li>
-        <li> Prompt</li>
+        <li>
+          <i className="fa-solid fa-check"></i>Motivation
+        </li>
+        <li>
+          <i className="fa-solid fa-check"></i>Ability
+        </li>
+        <li>
+          {" "}
+          <i className="fa-solid fa-check"></i>Prompt
+        </li>
       </ul>
       <h3>How About 21 Day Myth?</h3>
       <p>

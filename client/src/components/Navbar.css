@@ -5,6 +5,7 @@ nav {
   background-color: #14213d;
   position: sticky;
   top: 0;
+  padding: 2rem;
 }
 
 nav ul {
@@ -63,6 +64,7 @@ nav .menu span {
 @media (max-width: 600px) {
   nav .menu {
     display: flex;
+    margin: 2rem 1.5rem;
   }
   nav {
     flex-direction: column;

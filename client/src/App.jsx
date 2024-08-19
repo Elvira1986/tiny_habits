@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+// import { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import HabitForm from "./components/HabitForm";
@@ -14,14 +14,16 @@ function App() {
     <>
       <div className="App">
         <Navbar />
+
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/new-habit" element={<HabitForm />} />
+          <Route path="/habits" element={<HabitList />} />
+          <Route path="/habits/:id" element={<HabitItem />} />
+          <Route path="*" element={<Page404 />} />
+        </Routes>
+        <Footer />
       </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/new-habit" element={<HabitForm />} />
-        <Route path="/habits" element={<HabitList />} />
-        <Route path="/habits/:id" element={<HabitItem />} />
-        <Route path="*" element={<Page404 />} />
-      </Routes>
     </>
   );
 }

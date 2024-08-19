@@ -57,8 +57,8 @@ function HabitList() {
               <button type="button">
                 <i className="fa-solid fa-pen-to-square" title="Edit Habit"></i>
               </button>
-              <span className="HabitTitle">{habit.title} </span>
-              <span className="days">
+              <span className="Title">{habit.title} </span>
+              <span className="Days">
                 {habit.days_in} / {habit.total_days}
               </span>
             </Link>

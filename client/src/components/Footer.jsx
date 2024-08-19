@@ -1,8 +1,8 @@
 import "./Footer.css";
 function Footer() {
   return (
-    <div className="footer">
-      <p>Made with Love</p>
+    <div className="Footer">
+      <p>Made with Love @2024</p>
     </div>
   );
 }

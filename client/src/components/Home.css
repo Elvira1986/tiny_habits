@@ -1,10 +1,19 @@
 ul li {
   color: #e5e5e5;
-  text-align: center;
+  text-align: left;
+  margin-left: 2rem;
   list-style: none;
   font-weight: bold;
 }
 ul {
   text-align: left;
   padding-bottom: 1rem;
+}
+
+.Home {
+  padding: 2% 10%;
+}
+
+.fa-check {
+  margin-right: 20px;
 }
