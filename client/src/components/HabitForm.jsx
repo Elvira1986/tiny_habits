@@ -51,7 +51,7 @@ function HabitForm() {
 
   return (
     <>
-      <h3>Habit Form</h3>
+      <h3>Create New Habit</h3>
       <form className="HabitForm" onSubmit={handleSubmit}>
         <label>
           New Habit
